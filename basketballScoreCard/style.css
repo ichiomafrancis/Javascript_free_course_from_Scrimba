@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.container {
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1b244a;
+  padding: 20px;
+  align-items: center;
+  border: 3px solid #fff;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+input {
+  display: block;
+  width: 70px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: #000;
+}
+
+button {
+  /* border-radius: 2px; */
+}
+
+input,
+button {
+  border: none;
+}
