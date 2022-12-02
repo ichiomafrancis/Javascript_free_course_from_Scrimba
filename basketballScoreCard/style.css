@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Roboto:wght@400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,41 +7,52 @@
 }
 
 body {
-  background-color: aquamarine;
+  background-color: #358168;
+  font-family: "Orbitron", sans-serif;
 }
 
 .container {
   text-align: center;
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 250px;
   margin: 100px auto;
   display: flex;
   justify-content: space-around;
   background-color: #1b244a;
   padding: 20px;
   align-items: center;
-  border: 3px solid #fff;
+  border: 5px solid #fff;
   border-radius: 10px;
 }
 
 h3 {
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
 }
 
 input {
   display: block;
-  width: 70px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 100px;
+  height: 80px;
+  margin-bottom: 20px;
   background-color: #000;
+  border: none;
 }
 
 button {
-  /* border-radius: 2px; */
+  background-color: inherit;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #9aabd8;
+  color: #9aabd8;
+  border-radius: 3px;
+  font-size: 12px;
 }
 
 input,
 button {
-  border: none;
+  font-family: "Orbitron", sans-serif;
 }
