@@ -13,18 +13,20 @@ body {
 
 .container {
   text-align: center;
-  width: 400px;
-  height: 250px;
+  max-width: 400px;
+  max-height: 500px;
   margin: 100px auto;
-  display: flex;
-  justify-content: space-around;
   background-color: #1b244a;
   padding: 20px;
-  align-items: center;
-  border: 5px solid #fff;
+  /* align-items: center; */
+  border: 5px solid #ddd;
   border-radius: 10px;
 }
 
+.score-container {
+  display: flex;
+  justify-content: space-around;
+}
 h3 {
   color: #fff;
   margin-bottom: 10px;
@@ -39,6 +41,10 @@ input {
   margin-bottom: 20px;
   background-color: #000;
   border: none;
+  color: #f94f6d;
+  font-size: 60px;
+  /* font-weight: bold; */
+  text-align: center;
 }
 
 button {
@@ -50,6 +56,18 @@ button {
   color: #9aabd8;
   border-radius: 3px;
   font-size: 12px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 1px solid rgb(231, 228, 7);
+}
+
+.reset {
+  width: 50%;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 input,
