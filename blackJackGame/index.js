@@ -5,6 +5,7 @@ let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 let messageEl = document.getElementById("message-el");
+let sumEl = document.querySelector("#sum-el");
 
 function startGame() {
   if (sum <= 20) {
@@ -17,6 +18,8 @@ function startGame() {
     isAlive = false;
   }
 
+  // sumEl.innerText = `"Sum: ${sum}"`;
+  sumEl.innerText = "Sum: " + sum;
   messageEl.innerText = message;
 
   //CASH OUT
