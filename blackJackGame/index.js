@@ -19,6 +19,10 @@ function startGame() {
     isAlive = false;
   }
 
+  function newCard() {
+    console.log("Drawing a new card from the deck !");
+  }
+
   // sumEl.innerText = `"Sum: ${sum}"`;
   cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
   sumEl.innerText = "Sum: " + sum;
