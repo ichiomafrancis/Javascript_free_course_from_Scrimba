@@ -10,7 +10,6 @@ function getRandomInt(min, max) {
 
 let firstCard = getRandomInt(2, 11);
 let secondCard = getRandomInt(2, 11);
-let thirdCard = getRandomInt(2, 11);
 
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -22,6 +21,10 @@ let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
   // sumEl.innerText = `"Sum: ${sum}"`;
   sumEl.innerText = "Sum: " + sum;
@@ -43,6 +46,7 @@ function startGame() {
 }
 
 function newCard() {
+  let thirdCard = getRandomInt(2, 11);
   sum += thirdCard;
-  startGame();
+  renderGame();
 }
