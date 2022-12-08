@@ -46,6 +46,7 @@ function renderGame() {
 
 function newCard() {
   let thirdCard = getRandomInt(2, 11);
+  cards.push(thirdCard);
   sum += thirdCard;
   renderGame();
 }
