@@ -10,6 +10,7 @@ function getRandomInt(min, max) {
 
 let firstCard = getRandomInt(2, 11);
 let secondCard = getRandomInt(2, 11);
+let thirdCard = getRandomInt(2, 11);
 
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -33,16 +34,15 @@ function startGame() {
     message = "You're out of the game!";
     isAlive = false;
   }
-
-  function newCard() {
-    console.log("Drawing a new card from the deck !");
-  }
-
   messageEl.innerText = message;
-
   //CASH OUT
   console.log(hasBlackJack);
 
   //GAME OVER
   console.log(isAlive);
+}
+
+function newCard() {
+  sum += thirdCard;
+  startGame();
 }
