@@ -10,10 +10,9 @@ function getRandomInt(min, max) {
 
 let firstCard = getRandomInt(2, 11);
 let secondCard = getRandomInt(2, 11);
-
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
-
 let isAlive = true;
 let message = "";
 let messageEl = document.getElementById("message-el");
@@ -25,7 +24,7 @@ function startGame() {
 }
 
 function renderGame() {
-  cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
+  cardsEl.innerText = "Cards: " + cards[0] + " " + cards[1];
   // sumEl.innerText = `"Sum: ${sum}"`;
   sumEl.innerText = "Sum: " + sum;
   if (sum <= 20) {
