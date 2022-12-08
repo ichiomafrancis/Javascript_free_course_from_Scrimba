@@ -21,6 +21,9 @@ let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
+  cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
+  // sumEl.innerText = `"Sum: ${sum}"`;
+  sumEl.innerText = "Sum: " + sum;
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
   } else if (sum === 21) {
@@ -35,9 +38,6 @@ function startGame() {
     console.log("Drawing a new card from the deck !");
   }
 
-  // sumEl.innerText = `"Sum: ${sum}"`;
-  cardsEl.innerText = "Cards: " + firstCard + " " + secondCard;
-  sumEl.innerText = "Sum: " + sum;
   messageEl.innerText = message;
 
   //CASH OUT
@@ -46,4 +46,3 @@ function startGame() {
   //GAME OVER
   console.log(isAlive);
 }
-
