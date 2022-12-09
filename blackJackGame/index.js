@@ -8,6 +8,15 @@ and is less than (but not equal to) max.*/
 //   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 // }
 
+let cards = [];
+let sum = 0;
+let hasBlackJack = false;
+let isAlive = false;
+let message = "";
+let messageEl = document.getElementById("message-el");
+let sumEl = document.querySelector("#sum-el");
+let cardsEl = document.getElementById("cards-el");
+
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
   if (randomNumber === 1) {
@@ -18,18 +27,14 @@ function getRandomCard() {
     return randomNumber;
   }
 }
-let firstCard = getRandomCard(2, 11);
-let secondCard = getRandomCard(2, 11);
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
-let hasBlackJack = false;
-let isAlive = true;
-let message = "";
-let messageEl = document.getElementById("message-el");
-let sumEl = document.querySelector("#sum-el");
-let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
+  isAlive = true;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards.push(firstCard);
+  cards.push(secondCard);
+  sum = firstCard + secondCard;
   renderGame();
 }
 
