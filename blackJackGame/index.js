@@ -58,11 +58,6 @@ function renderGame() {
     isAlive = false;
   }
   messageEl.innerText = message;
-  //CASH OUT
-  console.log(hasBlackJack);
-
-  //GAME OVER
-  console.log(isAlive);
 }
 
 function newCard() {
