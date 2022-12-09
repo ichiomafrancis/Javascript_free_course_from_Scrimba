@@ -17,6 +17,11 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+let playerName = "Per";
+let playerChips = 145;
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = playerName + ": $" + playerChips;
+
 function getRandomCard() {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
   if (randomNumber === 1) {
