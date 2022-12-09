@@ -1,15 +1,25 @@
 /*Getting a random integer between two values.
-The function getRandomInt(min,max) returns a random integer between the specified values. 
+The function getRandomCard(min,max) returns a random integer between the specified values. 
 The value is no lower than min (or the next integer greater than min if min isn't an integer), 
 and is less than (but not equal to) max.*/
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-}
+// function getRandomCard(min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+// }
 
-let firstCard = getRandomInt(2, 11);
-let secondCard = getRandomInt(2, 11);
+function getRandomCard() {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+  if (randomNumber === 1) {
+    return 11;
+  } else if (randomNumber > 10) {
+    return 10;
+  } else {
+    return randomNumber;
+  }
+}
+let firstCard = getRandomCard(2, 11);
+let secondCard = getRandomCard(2, 11);
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -48,7 +58,7 @@ function renderGame() {
 }
 
 function newCard() {
-  let card = getRandomInt(2, 11);
+  let card = getRandomCard(2, 11);
   cards.push(card);
   sum += card;
   renderGame();
