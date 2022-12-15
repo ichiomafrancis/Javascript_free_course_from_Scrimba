@@ -67,7 +67,7 @@ hr {
 }
 
 .output {
-  width: 120px;
+  max-width: 150px;
   background-color: #273549;
   color: #55f991;
   padding: 12px;
