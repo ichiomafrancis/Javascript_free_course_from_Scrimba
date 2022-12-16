@@ -94,24 +94,14 @@ const characters = [
 
 let passwordOneEl = document.getElementById("passwordOne-el");
 let passwordTwoEl = document.getElementById("passwordTwo-el");
-let password = false;
 
-// let randomValue = characters[Math.floor(Math.random() * characters.length)];
-
-function getPassword() {
+function generateRandomPassword() {
   let passwordOne = "";
   let passwordTwo = "";
-  if (password === false) {
-    for (let i = 0; i < 15; i++) {
-      passwordOne += characters[Math.floor(Math.random() * characters.length)];
-      passwordTwo += characters[Math.floor(Math.random() * characters.length)];
-    }
-    passwordOneEl.textContent = passwordOne;
-    passwordTwoEl.textContent = passwordTwo;
-    password = true;
-  } else if (password === true) {
-    passwordOneEl.textContent = " ";
-    passwordTwoEl.textContent = " ";
-    password = false;
+  for (let i = 0; i < 15; i++) {
+    passwordOne += characters[Math.floor(Math.random() * characters.length)];
+    passwordTwo += characters[Math.floor(Math.random() * characters.length)];
   }
+  passwordOneEl.textContent = passwordOne;
+  passwordTwoEl.textContent = passwordTwo;
 }

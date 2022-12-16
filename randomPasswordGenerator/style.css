@@ -55,7 +55,8 @@ p {
 
 hr {
   margin-bottom: 20px;
-  border: 1px solid #2f3e53;
+  border: none;
+  border-top: 1px solid #2f3e53;
 
   /* width: 80%; */
 }
@@ -67,10 +68,10 @@ hr {
 }
 
 .output {
-  max-width: 150px;
+  width: 120px;
   background-color: #273549;
   color: #55f991;
-  padding: 12px;
+  padding: 12px 5px;
   margin-bottom: 10px;
 }
 
