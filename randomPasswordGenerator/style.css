@@ -38,7 +38,8 @@ body {
   font-size: 13px;
 }
 
-.passwordLength {
+.passwordLength,
+.checkbox {
   display: flex;
   justify-content: left;
   align-items: center;
