@@ -203,3 +203,17 @@ function generateRandomPassword() {
   passwordOneEl.textContent = passwordOne;
   passwordTwoEl.textContent = passwordTwo;
 }
+
+function copyPasswordOne() {
+  // getting the text content that we want to copy
+  let textOneEl = document.getElementById("passwordOne-el").textContent;
+  // Copy selected text into clipboard
+  navigator.clipboard.writeText(textOneEl);
+}
+
+function copyPasswordTwo() {
+  // getting the text content that we want to copy
+  let textTwoEl = document.getElementById("passwordTwo-el").textContent;
+  // Copy selected text into clipboard
+  navigator.clipboard.writeText(textTwoEl);
+}
