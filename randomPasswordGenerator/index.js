@@ -164,8 +164,8 @@ function generateRandomPassword() {
   let passwordOne = "";
   let passwordTwo = "";
   let checkboxEl = document.getElementById("checkbox-el").checked;
+  let passwordLengthEl = document.getElementById("passwordLength-el").value;
   if (checkboxEl === true) {
-    let passwordLengthEl = document.getElementById("passwordLength-el").value;
     for (let i = 0; i < passwordLengthEl; i++) {
       passwordOne +=
         withSpecialCharacters[
@@ -177,7 +177,6 @@ function generateRandomPassword() {
         ];
     }
   } else {
-    let passwordLengthEl = document.getElementById("passwordLength-el").value;
     for (let i = 0; i < passwordLengthEl; i++) {
       passwordOne +=
         withoutSpecialCharacters[
