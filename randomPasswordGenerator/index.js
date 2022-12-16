@@ -98,10 +98,13 @@ let passwordTwoEl = document.getElementById("passwordTwo-el");
 function generateRandomPassword() {
   let passwordOne = "";
   let passwordTwo = "";
-  for (let i = 0; i < 15; i++) {
+  let passwordLengthEl = document.getElementById("passwordLength-el").value;
+  for (let i = 0; i < passwordLengthEl; i++) {
     passwordOne += characters[Math.floor(Math.random() * characters.length)];
     passwordTwo += characters[Math.floor(Math.random() * characters.length)];
   }
   passwordOneEl.textContent = passwordOne;
   passwordTwoEl.textContent = passwordTwo;
 }
+
+console.log(passwordLengthEl);

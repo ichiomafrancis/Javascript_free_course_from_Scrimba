@@ -32,10 +32,26 @@ body {
   color: #4adf86;
 }
 
-p {
+.info {
   margin-bottom: 30px;
   color: #d5d4d8;
   font-size: 13px;
+}
+
+.passwordLength {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: #4adf86;
+}
+
+#passwordLength-el {
+  width: 10%;
+  /* padding: 3px; */
+  outline: none;
 }
 
 .btn {
