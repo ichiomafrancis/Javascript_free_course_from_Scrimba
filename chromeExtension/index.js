@@ -8,7 +8,7 @@ const ulEl = document.getElementById("ul-el");
 //Add event listener to the button and also perform the function once the button is clicked
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
-  innerEl.value = "";
+  inputEl.value = "";
   renderLeads();
 });
 
