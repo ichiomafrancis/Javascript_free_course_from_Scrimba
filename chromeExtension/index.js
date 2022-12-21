@@ -4,6 +4,8 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 //Get the unordered list element
 const ulEl = document.getElementById("ul-el");
+const deleteBtn = document.getElementById("delete-btn");
+
 //localStorage.getItem("key") - gets the value corresponding to the key
 //JSON.parse(localStorage.getItem("key")) - converts the string value into an array
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
@@ -12,6 +14,12 @@ if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
   renderLeads();
 }
+
+deleteBtn.addEventListener("dblclick", function () {
+  localStorage.clear();
+  myLeads = [];
+  renderLeads();
+});
 
 //Add event listener to the button and also perform the function once the button is clicked
 inputBtn.addEventListener("click", function () {
