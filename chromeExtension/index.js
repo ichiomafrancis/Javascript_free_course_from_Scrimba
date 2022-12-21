@@ -22,7 +22,6 @@ function renderLeads() {
       </a>
     </li>`;
   }
-
   ulEl.innerHTML = listItems;
 }
 // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
