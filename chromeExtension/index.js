@@ -4,11 +4,17 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 //Get the unordered list element
 const ulEl = document.getElementById("ul-el");
+//localStorage.getItem("key") - gets the value corresponding to the key
+//JSON.parse(localStorage.getItem("key")) - converts the string value into an array
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 //Add event listener to the button and also perform the function once the button is clicked
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   inputEl.value = "";
+  //JSON.stringify converts the myLeads array to a string.
+  //localStorage.setItem("key", "value") - Stores key value pairs in the local storage.
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
   renderLeads();
 });
 
