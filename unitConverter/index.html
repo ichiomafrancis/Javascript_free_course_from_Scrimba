@@ -4,14 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+    <!-- <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" /> -->
     <link rel="stylesheet" href="index.css" />
     <title>Unit Converter</title>
   </head>
 
   <body>
+    <!-- This is the main container -->
+    <div class="main-container">
+      <!-- This container houses the input section-->
+      <div class="input-container">
+        <h3 class="header">Metric/Imperial Unit Conversion</h3>
+        <input type="text" id="input-el" />
+        <button id="convert-btn" class="btn">Convert</button>
+      </div>
+
+      <!-- This container houses the output section -->
+      <div class="output-container">
+        <div class="output">
+          <h4 class="title">Length (Meter/Feet)</h4>
+          <p class="display" id="length-el">meter</p>
+        </div>
+        <div class="output">
+          <h4 class="title">Volume (Liters/Gallons)</h4>
+          <p class="display" id="volume-el">liters</p>
+        </div>
+        <div class="output">
+          <h4 class="title">Mass (Kilograms/Pounds)</h4>
+          <p class="display" id="mass-el">kilograms</p>
+        </div>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
