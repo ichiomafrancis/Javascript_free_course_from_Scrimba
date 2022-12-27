@@ -47,11 +47,12 @@ function generateSentence(desc, arr) {
   for (let i = 0; i < arr.length; i++) {
     if (i != arr.length - 1) {
       if (i == arr.length - 2) {
-        log += arr[i] + " ";
+        log += arr[i] + " and ";
       } else log += arr[i] + ", ";
-    } else log += `and ${arr[i]}`;
+    } else log += `${arr[i]}`;
   }
-  console.log(log);
+  return log;
 }
 
-generateSentence("largest countries", ["China", "India", "USA"]);
+const logOut = generateSentence("largest countries", ["China", "India", "USA"]);
+console.log(logOut);
