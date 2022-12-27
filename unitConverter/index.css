@@ -65,6 +65,12 @@ body {
   border: none;
 }
 
+.btn:hover,
+.btn:active {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
 .output {
   width: 500px;
   height: 108.57px;
